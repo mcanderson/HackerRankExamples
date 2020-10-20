@@ -34,6 +34,7 @@ namespace HackerRankExamples
         // Add your code here
         public void computeDifference()
         {
+            // Since we're getting maximum difference and the elements are all 0 or greater, just sort it and calculate from the ends. 
             int eleLength = elements.Length;
             Array.Sort(elements);
             maximumDifference = elements[eleLength - 1] - elements[0];
