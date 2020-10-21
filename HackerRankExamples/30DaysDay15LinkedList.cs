@@ -54,7 +54,6 @@ namespace HackerRankExamples
             {
                 Node newNode = new Node(data);
                 // To follow through next links until we hit the tail
-                // TODO determine if this needs to be a clone of head to avoid accidentally changing head?
                 Node tempNode = head;
                 while (tempNode.next != null)
                 {
