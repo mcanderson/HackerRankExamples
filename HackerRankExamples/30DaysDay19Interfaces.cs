@@ -27,16 +27,27 @@ namespace HackerRankExamples
         public int divisorSum(int n)
         {
             int sum = 0;
-            // Go backwards until 1. Could potentially add answer for n / i to make more efficient - so do n % i and then do n / i to add both the 
-            // divisor and it's pair, and then figure out where to stop early instead of incrementing through all of n. Decided to leave like this though -
-            // test cases didn't require this to be quicker and this passed. 
+            int tempMiddle = 0;
+            int secondDivisor = 0;
             for (int i = n; i > 0; i--)
             {
-                // Check if n is divisible by this #
+                // Check if n is divisible by this #. If it isn't, continue.
                 if (n % i == 0)
                 {
-                    // If it is, include in sum.
-                    sum += i;
+                    secondDivisor = n / i;
+                    if (secondDivisor >= tempMiddle && secondDivisor < i)
+                    {
+                        tempMiddle = secondDivisor;
+                        // Add both parts of divisor
+                        sum += secondDivisor + i;
+                    }
+                    // If not true, double-check if it's 1. Add to sum. 
+                    else if (secondDivisor == i)
+                    {
+                        sum += i;
+                    }
+                    // Short cut out if we're starting to hit the other divisors we already added to some - have to do this so we stop going through the for. 
+                    else return sum;
                 }
                 else continue;
             }
