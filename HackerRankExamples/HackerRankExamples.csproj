@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="30DaysDay27Testing.class" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="30DaysDay27Testing.class" />
+  </ItemGroup>
+
 </Project>
