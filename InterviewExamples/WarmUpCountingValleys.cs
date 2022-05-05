@@ -12,20 +12,20 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-namespace HackerRankExamples
+namespace InterviewExamples
 {
     // https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
     class WarmUpCountingValleys
     {
         static void WarmUp(string[] args)
         {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
             int steps = Convert.ToInt32(Console.ReadLine().Trim());
 
             string path = Console.ReadLine();
 
-            int result = WarmUpCountingValleys.countingValleys(steps, path);
+            int result = countingValleys(steps, path);
 
             textWriter.WriteLine(result);
 
@@ -33,14 +33,14 @@ namespace HackerRankExamples
             textWriter.Close();
         }
 
-           /*
-     * Complete the 'countingValleys' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. INTEGER steps
-     *  2. STRING path
-     */
+        /*
+  * Complete the 'countingValleys' function below.
+  *
+  * The function is expected to return an INTEGER.
+  * The function accepts following parameters:
+  *  1. INTEGER steps
+  *  2. STRING path
+  */
 
         public static int countingValleys(int steps, string path)
         {

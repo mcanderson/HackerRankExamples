@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace HackerRankExamples
+namespace InterviewExamples
 {
     class InterviewPrepGreedyMinAbsDiffArray
     {
@@ -50,7 +50,7 @@ namespace HackerRankExamples
 
         static void greedyDiff()
         {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
             int n = Convert.ToInt32(Console.ReadLine());
 

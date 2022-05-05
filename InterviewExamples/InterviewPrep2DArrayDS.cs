@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace HackerRankExamples
+namespace InterviewExamples
 {
     class InterviewPrep2DArrayDS
     {
@@ -82,7 +82,7 @@ namespace HackerRankExamples
          */
         static void ArrayStuff()
         {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
             int[][] arr = new int[6][];
 
@@ -109,9 +109,9 @@ namespace HackerRankExamples
 
             // Because we're summing off the t-shape, we go through array values in loop. 
             // -2 because there's only four in each row/column. 
-            for (int i = 0; i < (arr.Length - 2); i++)
+            for (int i = 0; i < arr.Length - 2; i++)
             {
-                for (int j = 0; j < (arr.Length - 2); j++)
+                for (int j = 0; j < arr.Length - 2; j++)
                 {
                     // Doesn't work when flipped to i, i+1, i+2 in the first round. Tried with the j+1 first instead. 
                     tempSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
